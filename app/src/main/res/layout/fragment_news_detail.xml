@@ -1,0 +1,116 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.bolasepakmalaysia.bm.NewsDetailFragment"
+    >
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsdetailfragment_progressBar"
+        android:layout_gravity="center_horizontal|center_vertical"
+    />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ScrollView
+            android:id="@+id/newsdetailfragment_sv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="18">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <com.android.volley.toolbox.NetworkImageView
+                    android:id="@+id/newsdetailfragment_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:maxHeight="500dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/newsdetailfragment_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:layout_below="@+id/newsdetailfragment_image"
+                    >
+                    <TextView
+                        android:id="@+id/newsdetailfragment_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/newsdetailfragment_title"
+                        android:textStyle="bold"
+                        android:paddingTop="10dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/newsdetailfragment_body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_below="@+id/newsdetailfragment_title"
+                        android:paddingTop="10dp"
+                        />
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/newsdetailfragment_llcomments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@+id/newsdetailfragment_rl"
+                    >
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/newsdetailfragment_llpostcomment"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            >
+
+            <EditText
+                android:id="@+id/newsdetailfragment_textpostcomment"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:hint="Post a comment..."
+                android:editable="true"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                />
+
+            <Button
+                android:id="@+id/newsdetailfragment_buttonpostcomment"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Post">
+
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

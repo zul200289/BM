@@ -1,0 +1,55 @@
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/maintabactivity_drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="7dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.bolasepakmalaysia.bm.MainTabActivity">
+
+        <include
+            android:id="@+id/maintabtoolbar"
+            layout="@layout/tool_bar"
+        ></include>
+
+        <com.bolasepakmalaysia.bm.widget.SlidingTabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabs"
+            android:elevation="2dp"
+            android:background="@color/colorPrimary"
+            >
+
+            </com.bolasepakmalaysia.bm.widget.SlidingTabLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+
+            </android.support.v4.view.ViewPager>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/maintabactivity_recyclerview"
+        android:layout_width="360dp"
+        android:layout_height="match_parent"
+        android:gravity="left"
+
+        android:background="#ffffff"
+        android:scrollbars="vertical"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+</android.support.v4.widget.DrawerLayout>
+
